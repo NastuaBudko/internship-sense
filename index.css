@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --weak-password-color: red;
+    --medium-password-color: yellow;
+    --strong-password-color: green;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.password-strength {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.password-input {
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+.password-strength__container {
+    width: 150px;
+    height: 20px;
+    display: flex;
+}
+
+.password-strength__section {
+    flex: 1;
+}
+
+.password-strength__section--1,
+.password-strength__section--2,
+.password-strength__section--3 {
+    background-color: #ccc;
+}
+
+.password-strength__section--1.password-weak {
+    background-color: var(--weak-password-color);
+}
+
+.password-strength__section--2.password-medium,
+.password-strength__section--1.password-medium {
+    background-color: var(--medium-password-color);
+}
+
+.password-strength__section--1.password-strong,
+.password-strength__section--2.password-strong,
+.password-strength__section--3.password-strong {
+    background-color: var(--strong-password-color);
+}
